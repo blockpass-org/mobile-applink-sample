@@ -50,7 +50,7 @@ export default class App extends Component<Props> {
                 this.onChange('env', 'blockpass-local')
               }}
             >
-              <Text style={this.state.tabIndex == 0 ? { color: 'white' } : { color: 'black' }}>Local Env</Text>
+              <Text style={this.state.tabIndex == 0 ? { color: 'white' } : { color: 'black' }}>Local</Text>
             </TouchableOpacity>
             <TouchableOpacity
               style={[styles.tab, this.state.tabIndex == 1 && { backgroundColor: '#4388FF' }]}
@@ -59,16 +59,25 @@ export default class App extends Component<Props> {
                 this.onChange('env', 'blockpass-staging')
               }}
             >
-              <Text style={this.state.tabIndex == 1 ? { color: 'white' } : { color: 'black' }}>Staging Env</Text>
+              <Text style={this.state.tabIndex == 1 ? { color: 'white' } : { color: 'black' }}>Staging</Text>
             </TouchableOpacity>
             <TouchableOpacity
               style={[styles.tab, this.state.tabIndex == 2 && { backgroundColor: '#4388FF' }]}
               onPress={() => {
                 this.onChange('tabIndex', 2)
+                this.onChange('env', 'blockpass-qa')
+              }}
+            >
+              <Text style={this.state.tabIndex == 2 ? { color: 'white' } : { color: 'black' }}>QA</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={[styles.tab, this.state.tabIndex == 3 && { backgroundColor: '#4388FF' }]}
+              onPress={() => {
+                this.onChange('tabIndex', 3)
                 this.onChange('env', 'blockpass')
               }}
             >
-              <Text style={this.state.tabIndex == 2 ? { color: 'white' } : { color: 'black' }}>Production Env</Text>
+              <Text style={this.state.tabIndex == 3 ? { color: 'white' } : { color: 'black' }}>Production</Text>
             </TouchableOpacity>
           </View>
           <TextInput style={styles.input} placeholder='ClientId' value={this.state.clientId} underlineColorAndroid='transparent' onChangeText={this.onChange.bind(this, 'clientId')} />
