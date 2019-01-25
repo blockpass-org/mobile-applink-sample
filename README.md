@@ -12,5 +12,5 @@ In which:
   - blockpass: Blockpass mobile application, available on AppStore & Android playstore
 - `client_id`: get from Developer portal or Service List Api
 - `ref_id`: unique identifier for a user
-- `session_id`: unique identifier for the current session
-- `redirect`: in case Service wants Blockpass to invoke its mobile application after registration, must be in encoded URL. (can use function encodeURIComponent in Javascript)
+- `session_id`: (optional) unique identifier for the current session
+- `redirect`: (optional) in case Service wants Blockpass to invoke its mobile application after registration, must be in encoded URL. (can use function encodeURIComponent in Javascript) 
